@@ -6,7 +6,7 @@ Created on Sun Jul 19 13:05:27 2020
 @author: vibinscat
 """
 
-from sys.Collections import Counter
+from collections import Counter
 
 interests = [
     (0, "Hadoop"), (0, "Big Data"), (0, "HBase"), (0, "Java"),
