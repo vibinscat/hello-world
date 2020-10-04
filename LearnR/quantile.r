@@ -18,6 +18,8 @@ theoretical_quantiles <- qnorm( p, mean = mean(x), sd = sd(x))
 plot(theoretical_quantiles, observed_quantiles)
 abline(0,1)
 
+
+z <- scale(x)
 observed_quantiles <- quantile(z, p)
 theoretical_quantiles <- qnorm(p) 
 plot(theoretical_quantiles, observed_quantiles)
