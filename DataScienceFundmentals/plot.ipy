@@ -1,0 +1,29 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Oct 23 21:23:46 2020
+
+@author: vibinscat
+"""
+
+import pandas as pd
+pd.plotting.register_matplotlib_converters()
+import matplotlib.pyplot as plt
+# %matplotlib inline
+import seaborn as sns
+print("Setup Complete")
+
+plt.figure(num=None, figsize=(10,6))
+
+columbus2_Ed_data_file_path = '../AstroPiFlightData/Columbus2_Ed_astro_pi_datalog.csv'
+
+columbus2_Ed_data = pd.read_csv(columbus2_Ed_data_file_path, index_col='ROW_ID', parse_dates=True)
+
+
+sns.scatterplot(x=columbus2_Ed_data['temp_cpu'], y=columbus2_Ed_data['pressure'])
+sns.heatmap(x=columbus2_Ed_data['temp_cpu'], y=columbus2_Ed_data['pressure'])
+
+
+
+
+

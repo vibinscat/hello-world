@@ -26,4 +26,3 @@ print(new_col)
 date_col = pd.Series(new_col)
 
 df['new_col'] = date_col
-# 
